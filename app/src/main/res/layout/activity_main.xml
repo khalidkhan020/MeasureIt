@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:weightSum="2.0">
+
+    <com.appzone.measureit.views.RulerView
+        android:id="@+id/ruler"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        app:accentColor="@color/colorAccent"
+        app:metric="false"
+        app:showPointer="true" />
+
+    <LinearLayout
+        android:id="@+id/right_container"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.0"
+        android:background="@color/colorAccent"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/activity_horizontal_margin">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_ruler" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_header"
+            android:textStyle="bold" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/margin_small"
+            android:text="@string/subtitle"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toggle_pointer_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="1.0"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/ic_pointer"
+                android:text="@string/button_hide_pointer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_caption" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/toggle_metric_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="1.0"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="8dp"
+                android:drawableTop="@drawable/ic_units"
+                android:gravity="center"
+                android:text="@string/button_metric"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_caption" />
+
+            <android.support.v7.widget.AppCompatTextView
+                android:id="@+id/random_color_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_weight="1.0"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:drawablePadding="8dp"
+                android:gravity="center"
+                android:drawableTop="@drawable/ic_colors"
+                android:text="@string/button_change_color"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_caption" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>
